@@ -1,0 +1,2 @@
+# Kill all processes running on any nvidia gpu on the system
+kill $(nvidia-smi | awk '$5=="PID" {p=1} p {print $5}')
